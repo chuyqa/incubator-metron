@@ -15,15 +15,7 @@
 #  limitations under the License.
 #
 ---
-metron_version: 0.2.0BETA
-metron_directory: /usr/metron/{{ metron_version }}
-pcapservice_jar_name: metron-api-{{ metron_version }}.jar
-pcapservice_jar_src: "{{ playbook_dir }}/../../metron-platform/metron-api/target/{{ pcapservice_jar_name }}"
-pcapservice_jar_dst: "{{ metron_directory }}/lib/{{ pcapservice_jar_name }}"
-pcapservice_port: 8081
-hbase_config_path: "/etc/hbase/conf"
-query_hdfs_path: "/tmp"
-pcap_hdfs_path: "/apps/metron/pcap"
-metron_pcapservice_logrotate_frequency: daily
-metron_pcapservice_logrotate_retention: 30
+dependencies:
+  - python-pip
+  - libselinux-python
 
